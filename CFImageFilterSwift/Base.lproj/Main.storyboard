@@ -92,11 +92,12 @@
                         <outlet property="rightImageViewConstraint" destination="SXN-2K-pj1" id="Q8q-1h-7fu"/>
                         <outlet property="topImageViewContraint" destination="XCg-vo-OKY" id="nOt-GB-1gu"/>
                         <segue destination="nYf-8M-FJr" kind="show" identifier="ShowPhotos" id="WRl-Eo-JMh"/>
+                        <segue destination="Wy5-Lw-5HB" kind="show" identifier="ShowPhotosFramework" id="sTx-FS-kmB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="140"/>
+            <point key="canvasLocation" x="518" y="-36"/>
         </scene>
         <!--Photos View Controller-->
         <scene sceneID="Gab-el-JmF">
@@ -220,7 +221,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM4-lc-Fwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="-22"/>
+            <point key="canvasLocation" x="1221" y="-36"/>
+        </scene>
+        <!--Photos Framework View Controller-->
+        <scene sceneID="MVH-6V-RPJ">
+            <objects>
+                <viewController id="Wy5-Lw-5HB" customClass="PhotosFrameworkViewController" customModule="CFImageFilterSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wlr-nS-fa7"/>
+                        <viewControllerLayoutGuide type="bottom" id="olw-lW-EFz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u9e-uc-Pj4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FKX-r1-e5O">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="epf-JE-YFs">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosCell" id="ehu-s3-eP2" customClass="PhotosFrameworkCell" customModule="CFImageFilterSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-Ua-UcJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ofh-Ua-UcJ" firstAttribute="leading" secondItem="ehu-s3-eP2" secondAttribute="leadingMargin" constant="-8" id="2Cn-11-N6T"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ofh-Ua-UcJ" secondAttribute="trailing" constant="-8" id="4hA-sA-s0B"/>
+                                            <constraint firstItem="ofh-Ua-UcJ" firstAttribute="top" secondItem="ehu-s3-eP2" secondAttribute="topMargin" constant="-8" id="RDY-2G-xFO"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ofh-Ua-UcJ" secondAttribute="bottom" constant="-8" id="bWm-qF-bgk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="ofh-Ua-UcJ" id="bRE-Ve-KGc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FKX-r1-e5O" secondAttribute="trailing" constant="-16" id="Ex0-7a-AnT"/>
+                            <constraint firstItem="FKX-r1-e5O" firstAttribute="leading" secondItem="u9e-uc-Pj4" secondAttribute="leadingMargin" constant="-16" id="UgP-Yf-6JP"/>
+                            <constraint firstItem="olw-lW-EFz" firstAttribute="top" secondItem="FKX-r1-e5O" secondAttribute="bottom" id="epy-KO-ihA"/>
+                            <constraint firstItem="FKX-r1-e5O" firstAttribute="top" secondItem="u9e-uc-Pj4" secondAttribute="topMargin" id="goq-EI-eFM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="FKX-r1-e5O" id="3gJ-3Y-hfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAL-KZ-Hyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="702"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2vv-hd-15x">

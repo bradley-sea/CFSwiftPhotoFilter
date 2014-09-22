@@ -69,7 +69,7 @@ class ViewController: UIViewController, SelectPhotoDelegate, UIImagePickerContro
  
     func setupAlertController() {
         //add photos option
-        var photoLibraryAction = UIAlertAction(title: "Images", style: UIAlertActionStyle.Default) { (action) -> Void in
+        var photoLibraryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.performSegueWithIdentifier("ShowPhotos", sender: self)
         }
          self.alertController.addAction(photoLibraryAction)
@@ -89,7 +89,13 @@ class ViewController: UIViewController, SelectPhotoDelegate, UIImagePickerContro
         var filterAction = UIAlertAction(title: "Filter", style: UIAlertActionStyle.Default) { (action) -> Void in
            self.goIntoFilteringMode()
         }
-        self.alertController.addAction(filterAction) 
+        self.alertController.addAction(filterAction)
+        
+        //add photos option
+        var photoFrameworkAction = UIAlertAction(title:"PhotosFramework", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.performSegueWithIdentifier("ShowPhotosFramework", sender: self)
+        }
+        self.alertController.addAction(photoFrameworkAction)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

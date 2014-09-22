@@ -29,6 +29,8 @@
 		A2F8D92519D0BBDD00EC1333 /* FilterThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92419D0BBDD00EC1333 /* FilterThumbnail.swift */; };
 		A2F8D92719D0C02300EC1333 /* CoreDataSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92619D0C02300EC1333 /* CoreDataSeeder.swift */; };
 		A2F8D92919D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92819D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift */; };
+		A2F8D92B19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92A19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift */; };
+		A2F8D92D19D0DCA000EC1333 /* PhotosFrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92C19D0DCA000EC1333 /* PhotosFrameworkCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		A2F8D92419D0BBDD00EC1333 /* FilterThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterThumbnail.swift; path = ../FilterThumbnail.swift; sourceTree = "<group>"; };
 		A2F8D92619D0C02300EC1333 /* CoreDataSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSeeder.swift; sourceTree = "<group>"; };
 		A2F8D92819D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2F8D92A19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkViewController.swift; sourceTree = "<group>"; };
+		A2F8D92C19D0DCA000EC1333 /* PhotosFrameworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +118,11 @@
 				A2F8D92619D0C02300EC1333 /* CoreDataSeeder.swift */,
 				A23F98E819CF45E800BC8561 /* PhotosViewController.swift */,
 				A23F98CA19CF321700BC8561 /* Main.storyboard */,
+				A2F8D92A19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift */,
 				A2F8D92819D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift */,
 				A2F8D92419D0BBDD00EC1333 /* FilterThumbnail.swift */,
 				A23F98F319CF4BA700BC8561 /* PhotoCollectionViewCell.swift */,
+				A2F8D92C19D0DCA000EC1333 /* PhotosFrameworkCell.swift */,
 				A23F98CD19CF321700BC8561 /* Images.xcassets */,
 				A23F98EA19CF4A6E00BC8561 /* Photos */,
 				A23F98CF19CF321700BC8561 /* LaunchScreen.xib */,
@@ -281,7 +287,9 @@
 				A2F8D92119D0B24E00EC1333 /* Filter.swift in Sources */,
 				A2F8D92719D0C02300EC1333 /* CoreDataSeeder.swift in Sources */,
 				A2F8D92919D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift in Sources */,
+				A2F8D92B19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift in Sources */,
 				A23F98F419CF4BA700BC8561 /* PhotoCollectionViewCell.swift in Sources */,
+				A2F8D92D19D0DCA000EC1333 /* PhotosFrameworkCell.swift in Sources */,
 				A23F98E919CF45E800BC8561 /* PhotosViewController.swift in Sources */,
 				A23F98C719CF321700BC8561 /* CFImageFilterSwift.xcdatamodeld in Sources */,
 				A23F98C419CF321700BC8561 /* AppDelegate.swift in Sources */,
