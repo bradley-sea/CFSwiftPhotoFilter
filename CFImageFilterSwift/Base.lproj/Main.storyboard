@@ -93,6 +93,7 @@
                         <outlet property="topImageViewContraint" destination="XCg-vo-OKY" id="nOt-GB-1gu"/>
                         <segue destination="nYf-8M-FJr" kind="show" identifier="ShowPhotos" id="WRl-Eo-JMh"/>
                         <segue destination="Wy5-Lw-5HB" kind="show" identifier="ShowPhotosFramework" id="sTx-FS-kmB"/>
+                        <segue destination="TIh-Xp-lPt" kind="show" identifier="ShowAVFoundation" id="04W-JR-tVT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -222,6 +223,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM4-lc-Fwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1221" y="-36"/>
+        </scene>
+        <!--Foundation Camera View Controller-->
+        <scene sceneID="7sk-1p-Fxu">
+            <objects>
+                <viewController id="TIh-Xp-lPt" customClass="AVFoundationCameraViewController" customModule="CFImageFilterSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Xr-Hp-lMS"/>
+                        <viewControllerLayoutGuide type="bottom" id="H1e-3I-PQB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0t3-Oa-S26">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYe-gY-9Xh">
+                                <rect key="frame" x="272" y="478" width="55" height="30"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="capturePressed:" destination="TIh-Xp-lPt" eventType="touchUpInside" id="1V5-El-y69"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ym5-ZI-oxy">
+                                <rect key="frame" x="0.0" y="472" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Hff-nJ-7yZ"/>
+                                    <constraint firstAttribute="width" constant="120" id="pb1-gi-zcC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ym5-ZI-oxy" firstAttribute="leading" secondItem="0t3-Oa-S26" secondAttribute="leadingMargin" constant="-16" id="MAV-E0-VxB"/>
+                            <constraint firstAttribute="centerX" secondItem="CYe-gY-9Xh" secondAttribute="centerX" id="WNa-tK-Jtt"/>
+                            <constraint firstItem="H1e-3I-PQB" firstAttribute="top" secondItem="ym5-ZI-oxy" secondAttribute="bottom" constant="8" id="eQR-Y3-qpV"/>
+                            <constraint firstItem="H1e-3I-PQB" firstAttribute="top" secondItem="CYe-gY-9Xh" secondAttribute="bottom" constant="92" id="i43-8Y-DNG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="capturePreviewImageView" destination="ym5-ZI-oxy" id="wnZ-ou-UNC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcx-5L-eb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="-678"/>
         </scene>
         <!--Photos Framework View Controller-->
         <scene sceneID="MVH-6V-RPJ">

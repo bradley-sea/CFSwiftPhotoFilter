@@ -96,6 +96,11 @@ class ViewController: UIViewController, SelectPhotoDelegate, UIImagePickerContro
             self.performSegueWithIdentifier("ShowPhotosFramework", sender: self)
         }
         self.alertController.addAction(photoFrameworkAction)
+        
+        var avFoundationAction = UIAlertAction(title: "AVFoundation", style: UIAlertActionStyle.Default) { (alert) -> Void in
+             self.performSegueWithIdentifier("ShowAVFoundation", sender: self)
+        }
+        self.alertController.addAction(avFoundationAction)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -170,28 +175,6 @@ class ViewController: UIViewController, SelectPhotoDelegate, UIImagePickerContro
         self.resetFilteredThumbnails()
         
         self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-   func gpuPressed(sender: AnyObject) {
-        var image = CIImage(image: self.imageView.image)
-        var filter = CIFilter(name: "CIPhotoEffectTransfer")
-        filter.setDefaults()
-        var keys = filter.inputKeys() as [String]
-    filter.setValue(image, forKey: kCIInputImageKey)
-    var ciTextureImage = CIImage(image: UIImage(named: "grassdistortion"))
-    
-    //filter.setValue(ciTextureImage, forKey: "inputTexture")
-    
-        for key in keys {
-            println(key)
-        }
-//        filter.setValue(image, forKey: kCIInputImageKey)
-//        var color = CIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
-//        filter.setValue(color, forKey: kCIInputColorKey)
-        var result = filter.valueForKey(kCIOutputImageKey) as CIImage
-        var extent = result.extent()
-        var imgRef = self.gpuContext?.createCGImage(result, fromRect: extent)
-        self.imageView.image = UIImage(CGImage: imgRef)
     }
 
     func fetchFilters() {

@@ -31,6 +31,7 @@
 		A2F8D92919D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92819D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift */; };
 		A2F8D92B19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92A19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift */; };
 		A2F8D92D19D0DCA000EC1333 /* PhotosFrameworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92C19D0DCA000EC1333 /* PhotosFrameworkCell.swift */; };
+		A2F8D92F19D104A800EC1333 /* AVFoundationCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F8D92E19D104A800EC1333 /* AVFoundationCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		A2F8D92819D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2F8D92A19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkViewController.swift; sourceTree = "<group>"; };
 		A2F8D92C19D0DCA000EC1333 /* PhotosFrameworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosFrameworkCell.swift; sourceTree = "<group>"; };
+		A2F8D92E19D104A800EC1333 /* AVFoundationCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				A2F8D92619D0C02300EC1333 /* CoreDataSeeder.swift */,
 				A23F98E819CF45E800BC8561 /* PhotosViewController.swift */,
 				A23F98CA19CF321700BC8561 /* Main.storyboard */,
+				A2F8D92E19D104A800EC1333 /* AVFoundationCameraViewController.swift */,
 				A2F8D92A19D0DA8E00EC1333 /* PhotosFrameworkViewController.swift */,
 				A2F8D92819D0C1A000EC1333 /* FilterThumbnailCollectionViewCell.swift */,
 				A2F8D92419D0BBDD00EC1333 /* FilterThumbnail.swift */,
@@ -294,6 +297,7 @@
 				A23F98C719CF321700BC8561 /* CFImageFilterSwift.xcdatamodeld in Sources */,
 				A23F98C419CF321700BC8561 /* AppDelegate.swift in Sources */,
 				A2F8D92519D0BBDD00EC1333 /* FilterThumbnail.swift in Sources */,
+				A2F8D92F19D104A800EC1333 /* AVFoundationCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
